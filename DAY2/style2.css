@@ -1,0 +1,38 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+body{
+    /* margin: 20px; */
+    padding: 10px 20px;
+    height: 100vh;
+    width: 100vw;
+}
+.parent{
+    ul:first-child{
+        background-color: aqua;
+    }
+    >ul{
+        background-color: pink;
+    }
+}
+    /* ul:last-child{
+        background-color: blue;
+        box-sizing: border-box;
+    }
+    ul:first-child{
+        background-color: green;
+    }
+}
+.parent div ul:last-child li:nth-child(3)
+{
+    /* width: 2.8em; */
+    /* background-color: gray; */
+    /* box-sizing: border-box; */
+/* li:last-child
+{
+    background-color: palevioletred;
+} */
+.parent+ul{
+    background-color: chocolate;
+}

@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* .parent{
+    background-color: bisque;
+    padding: 16px;
+    margin: 16px;
+    border: 1px solid black; */
+    /* width= border(l&r)+content+padding; */
+/* } */
+/* .parent p{
+    background-color:beige;
+} */
+html{
+    font-size: 2rem;;
+}
+.btn{
+    display: block;
+    box-shadow: 5px 5px 4px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    background-color: blueviolet;
+    color: aliceblue;
+    scale: 1.3;
+    border:none;
+}
+body{
+    width: 100vw;
+    height: 50vh;
+    background-color: blue;
+}
+.parent{
+    background-color: green;
+    height: 100px;
+}
+.child{
+    background-color: aquamarine;
+    height: 100%;
+}

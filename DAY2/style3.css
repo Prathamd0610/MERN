@@ -1,0 +1,41 @@
+.parent1{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+}
+.parent2{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+}
+.parent3{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.parent4{
+    background-color: aqua;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.child{
+    background-color: burlywood;
+    border: 1px solid red;
+    flex-basis: 50px;
+    /* height: 400px; */
+}
+.parent{
+    display: flex;
+    margin: 10px;
+}
+/* .searchbox{
+    /* flex-grow: 3; */
+    /* flex-shrink: 1; */
+/* } */
+/* .cart{ */
+    /* flex-grow: 1; */
+/* }
