@@ -1,0 +1,17 @@
+.parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    border: 2px solid brown;
+    background-color: palevioletred;
+}
+.child{
+    min-height: 50px;
+    max-height: 100px;
+    min-width: 50px;
+    max-height: 100px;
+    background-color: black;
+    margin: 5px;
+    color: aliceblue;
+    border: 2px solid brown;
+
+}
