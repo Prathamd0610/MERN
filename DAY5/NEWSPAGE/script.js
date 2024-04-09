@@ -12,7 +12,7 @@ function callAPI(){
 }
 callAPI();
 function renderUI(data){
-    //got srticles from data
+    //got articles from data
     const articles= data.articles;
     //single article from all article array
     for(let i=0;i<articles.length;i++){
