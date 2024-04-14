@@ -1,0 +1,15 @@
+{
+  "name": "internal_modules",
+  "version": "1.0.0",
+  "description": "DAY7 FILES",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon script"
+  },
+  "author": "Pratham Dhingra",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
