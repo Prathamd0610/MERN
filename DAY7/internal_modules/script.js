@@ -44,7 +44,7 @@ const data= fs.readFileSync("./data.json","utf-8");
 const dataObject= JSON.parse(data);
 // console.log(dataObject);
 const product= dataObject.products;
-console.log()
+console.log(product);
 const htmlTemplate= `
 <!DOCTYPE HTML>
 <HTML lang="en-US">
@@ -53,9 +53,18 @@ const htmlTemplate= `
         .product-card{
             max-width:500px;
             margin:20px auto;
-            border: 3px double brown;
+            border: 5px double black;
             border-radius:8px;
             padding:15px;
+            background-color:white;
+            color: brown;
+        }
+        // img:hover{
+        //     transform:scale(1.2);
+        // }
+        .title{
+            font-size:1.3rem;
+            text-align:center;
         }
     </style>
     </head>
@@ -65,10 +74,14 @@ const htmlTemplate= `
 </html>`
 const cardTemplate=`
 <div class='product-card'>
-    <h4> _TITLE</h4>
+    <h4 class='title'> _TITLE</h4>
+    <p>Rating : RATING</p>
+    <p>Price : PRICE</p>
     <p>_INFO_</p>
+    <a href="?id=#link">Read More</a>
+    <img src="_img1">
 </div>
-` 
+`  
 // const card1= cardTemplate
 //                 .replace('_TITLE',product[0].title)
 //                 .replace('_INFO_',product[0].description);
@@ -82,9 +95,13 @@ const cardTemplate=`
 // const allcards=card1+card2+card3;
 const allcards=product.map((elem)=>{
     let newcard=cardTemplate;
-    newcard=newcard.replace('_TITLE',elem.title)
+    newcard=newcard.replace('_TITLE',elem.title);
+    newcard=newcard.replace('PRICE',elem.price);
+    newcard=newcard.replace('RATING',elem.rating);
+    newcard=newcard.replace('link',elem.id);
     newcard=newcard.replace('_INFO_',elem.description);
-    return newcard
+    newcard=newcard.replace('_img1',elem.images[0]);
+    return newcard;
 });
 const page =htmlTemplate.replace('_PRODUCTS_CARDS_',allcards); 
 const app= http.createServer((req,res)=>{
@@ -93,7 +110,7 @@ const app= http.createServer((req,res)=>{
     res.writeHead(200,{
         'content-type':'text/html', 
     })
-    res.end(page); 
+    res.end(page);  
 });
 // http://localhost:1400/
 app.listen(1400,()=>{
